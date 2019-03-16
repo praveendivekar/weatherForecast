@@ -1,0 +1,12 @@
+@import '../../../../../styles.scss';
+
+.footer-container {
+  background-color: $primaryColor1;
+  height: 100px;
+
+  .footer-note {
+    color: $greyScaleColor1;
+    padding: 35px;
+    font-size: $xxs;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../../../../styles.scss';
+
+.header-container {
+  height: 100px;
+  background-color: $primaryColor1;
+
+  .header-note {
+    font-size: $xl;
+    color: $greyScaleColor1;
+    padding: 35px;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../../../../styles.scss';
+
+.button {
+  background-color: $primaryColor1;
+  color: $greyScaleColor1;
+  font-size: $sm;
+
+  &.disabled,
+    &[disabled] {
+      cursor: pointer;
+      background-color: $greyScaleColor5;
+      border: none;
+    }
+}
+

@@ -1,0 +1,38 @@
+@import '../../../../styles.scss';
+
+.weather-list-container {
+  padding: 40px;
+  text-align: center;
+  min-height: 100%;
+
+  // styles for input - using id to change the styles as the component is from primeng
+  #float-input {
+    width: 50%;
+    min-height: 40px;
+    font-size: $sm;
+    color: $greyScaleColor4;
+    padding: 15px;
+    border: 1px solid $greyScaleColor3;
+  }
+
+
+  .invalid {
+    border: 1px solid $primaryColor6 !important;
+  }
+}
+
+.header-label {
+    color: $primaryColor2;
+
+    .city-header  h2{
+      color: $primaryColor2;
+      font-size: $lg;
+    }
+  }
+
+  .weather-list {
+    .weather-time-stamp h3 {
+      color: $greyScaleColor6;
+      font-size: $md;
+    }
+  }

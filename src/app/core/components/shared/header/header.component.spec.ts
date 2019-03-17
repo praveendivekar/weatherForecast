@@ -19,7 +19,15 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
+  // check for the header component creation
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  // check for the header component content
+  it('header component should have content', () => {
+    const headerElement: HTMLElement = fixture.nativeElement;
+    const span = headerElement.querySelector('span');
+    expect(span.textContent).toEqual('Accurate Weather');
   });
 });

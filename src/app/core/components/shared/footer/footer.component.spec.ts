@@ -19,7 +19,15 @@ describe('FooterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  // check for the footer component creation
+  it('should create footer component', () => {
+    expect(component).toBeDefined();
+  });
+
+  // check for the footer component content
+  it('component should render with child elements', () => {
+    const footerElement: HTMLElement = fixture.nativeElement;
+    const span = footerElement.querySelector('span');
+    expect(span.textContent).toEqual('© 2019 weatherforecast, Inc. All Rights Reserved');
   });
 });

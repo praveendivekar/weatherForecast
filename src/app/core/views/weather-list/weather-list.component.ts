@@ -3,7 +3,7 @@ import { WEATHER_LIST_BUTTON_LABEL } from './weather-list-config';
 import { CommonService } from '../../services/common.service';
 import { WeatherListService } from '../../services/weather-list.service';
 import { WeatherData, WeatherServiceResponse } from '../../interfaces/common-interface';
-import { groupBy } from 'loadsh';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-weather-list',
@@ -13,7 +13,7 @@ import { groupBy } from 'loadsh';
 export class WeatherListComponent implements OnInit {
   public selectedCity: string;
   public buttonLabel: string;
-  public groupedWeatherList: Array<any>;
+  public groupedWeatherList: object;
   public weatherTimeStamps: Array<string>;
 
   constructor(
@@ -64,7 +64,7 @@ export class WeatherListComponent implements OnInit {
       });
     }
 
-    this.groupedWeatherList = groupBy(weatherList, 'timeStamp');
+    this.groupedWeatherList = _.groupBy(weatherList, 'timeStamp');
     this.weatherTimeStamps = Object.keys(this.groupedWeatherList);
   }
 }
